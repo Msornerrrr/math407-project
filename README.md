@@ -56,5 +56,5 @@ python3 p2.py
 
 #### compare those two number
 - I notice that the line is closer to 1 for Champernowne number, which indicates that Champernowne number are more random
-- However, the number of 1 is always slightly more than 0, so both amy actually not that random
+- However, the number of 1 is always slightly more than 0, so both number may actually not that random
 - Randomness, in this case, is defined by the ratio of number of 1 and 0, since if trully random, the ratio should close to 1

@@ -3,9 +3,24 @@
 - Email: hjiang86@usc.edu
 - Section: 39625
 
-## Requirement & Dependencies
-This project requires python3, matplotlib, and numpy installed \
+## Setup Steps
+- This project requires python3, matplotlib, and numpy installed
 
+### step 1: install python with packages: matplotlib, numpy
+- https://www.python.org/downloads/
+- https://matplotlib.org/stable/users/installing/index.html
+- https://numpy.org/install/
+
+### step 2: copy this program to your folder
+- open one newly created empty folder in terminal and type 
+```
+git clone git@github.com:Msornerrrr/math407-project.git
+```
+
+### step 3: open the folder in terminal
+- you'll get a folder with name math407-project
+- open it and you'll see p1.py & p2.py
+- you could then run the program with terminal
 
 ## Problem 1
 ```

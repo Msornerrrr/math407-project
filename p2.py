@@ -27,8 +27,8 @@ def Copeland_Erdos(n):
         n -= 1
     return str
             
-## determine the difference between num of 0 and num of 1
-def diff(sequence):
+## determine the 
+def ratio(sequence):
     count_0 = 0
     count_1 = 0
     for digit in sequence:
@@ -37,9 +37,9 @@ def diff(sequence):
         elif digit == '0':
             count_0 += 1
     
-    # the difference should not be significant
-    diff = abs(count_0 - count_1)
-    return diff
+    if count_0 == 0:
+        return count_1
+    return count_1 / count_0
 
 ## 
 n = 40000
@@ -52,13 +52,13 @@ while i < n:
     str1 = Champernowne(i)
     str2 = Copeland_Erdos(i)
     index_list.append(i)
-    Champernowne_list.append(diff(str1) / len(str1))
-    Copeland_Erdos_list.append(diff(str2) / len(str2))
+    Champernowne_list.append(ratio(str1))
+    Copeland_Erdos_list.append(ratio(str2))
     i *= 2
 
 # str = Champernowne(10000)
-# print(diff(str) / len(str))
+# print(ratio(str))
 
-plt.plot(index_list, Champernowne_list)
-plt.plot(index_list, Copeland_Erdos_list)
+plt.plot(index_list, Champernowne_list, 'b')
+plt.plot(index_list, Copeland_Erdos_list, 'g')
 plt.show()

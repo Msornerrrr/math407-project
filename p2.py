@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import random
 
 ## print first n Champernowne number
 # @precondition: n >= 0
@@ -26,6 +27,12 @@ def Copeland_Erdos(n):
         i += 1
         n -= 1
     return str
+
+def Random(n):
+    s = ""
+    for i in range(0, n):
+        s += str(random.randint(0, 2))
+    return s
             
 ## determine the 
 def ratio(sequence):
@@ -42,23 +49,27 @@ def ratio(sequence):
     return count_1 / count_0
 
 ## 
-n = 40000
+n = 400000
 index_list = []
 Champernowne_list = []
 Copeland_Erdos_list = []
+Random_list = []
 
-i = 8
+i = 10
 while i < n:
     str1 = Champernowne(i)
     str2 = Copeland_Erdos(i)
+    str3 = Random(i)
     index_list.append(i)
     Champernowne_list.append(ratio(str1))
     Copeland_Erdos_list.append(ratio(str2))
-    i *= 2
+    Random_list.append(ratio(str3))
+    i += 10000
 
 # str = Champernowne(10000)
 # print(ratio(str))
 
 plt.plot(index_list, Champernowne_list, 'b')
 plt.plot(index_list, Copeland_Erdos_list, 'g')
+plt.plot(index_list, Random_list, 'r')
 plt.show()

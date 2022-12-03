@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 # global variables
-points_count = 1000
+points_count = 10000
 earth_area = 510.1  # unit: km^2
 
 # estimate antarctica as a circle
@@ -94,8 +94,8 @@ print("Estimated area of africa:", africa_area, "km^2")
 
 
 ## plot the points
-ax.scatter(x, y, z)
-ax.scatter(antarctic_x, antarctic_y, antarctic_z, marker='p')
-ax.scatter(africa_x, africa_y, africa_z, marker='o')
+# ax.scatter(x, y, z)
+# ax.scatter(antarctic_x, antarctic_y, antarctic_z, marker='p')
+# ax.scatter(africa_x, africa_y, africa_z, marker='o')
 
-plt.show()
+# plt.show()
